@@ -1,6 +1,5 @@
-a=input()
-b=input()
-c=input()
-print((int(a))+(int(b))-(int(c)))
-str=a+b
-print((int(str))-(int(c)))
+a=int(input())
+b=int(input())
+c=int(input())
+print(a+b-c)
+print(int((str(a))+(str(b)))-c)
