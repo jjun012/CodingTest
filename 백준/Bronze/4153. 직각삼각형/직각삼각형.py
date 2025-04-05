@@ -1,15 +1,8 @@
-n=[]
-n_max=0
-while(True):
-    n=list(map(int,input().split()))
-    if (sum(n)==0):
+while True:
+    a,b,c=map(int,input().split())
+    if (a+b+c)==0:
         break
-
-    n_max=max(n)
-    n.remove(n_max)
-    if (n_max**2)==(sum(x**2 for x in n)):
+    if (a**2)==(b**2)+(c**2) or (b**2)==(a**2)+(c**2) or (c**2)==(b**2)+(a**2):
         print('right')
     else:
         print('wrong')
-
-    
