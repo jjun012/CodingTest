@@ -1,5 +1,6 @@
-n= int(input())
+n=int(input())
 cnt=0
+
 while n>=0:
     if n%5==0:
         cnt+=(n//5)
