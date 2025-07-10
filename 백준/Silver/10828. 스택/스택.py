@@ -1,23 +1,24 @@
 n=int(input())
-arr=[]
+stack=[]
 for i in range(n):
+
     a=input().split()
     if a[0]=='push':
-        arr.append(a[1])
-    elif a[0]=='pop':
-        if len(arr)==0:
-            print(-1)
+        stack.append(a[1])
+    elif a[0]=='top':
+        if len(stack)!=0:
+            print(stack[-1])
         else:
-            print(arr.pop())
+            print(-1)
     elif a[0]=='size':
-        print(len(arr))
+        print(len(stack))
     elif a[0]=='empty':
-        if len(arr)==0:
+        if len(stack)==0:
             print(1)
         else:
             print(0)
-    elif a[0]=='top':
-        if len(arr)==0:
-            print(-1)
+    elif a[0]=='pop':
+        if len(stack)!=0:
+            print(stack.pop())
         else:
-            print(arr[-1])
+            print(-1)
